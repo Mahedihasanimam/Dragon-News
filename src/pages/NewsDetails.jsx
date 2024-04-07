@@ -1,14 +1,20 @@
-import { MdOutlineRemoveRedEye } from "react-icons/md";
+
 import Header from "../shared/Header";
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams} from "react-router-dom";
+
 const NewsDetails = () => {
-    const {title,image_url,author,details,total_view,_id}=useParams()
+ 
+
+    const {id}=useParams();
+    console.log(id)
+    
+    // console.log(title)
     return (
         <div>
             <div className="text-center">
             <Header></Header>
             </div>
-            NEWS DETAILS   
+           {/* {_id}  */}
             <div>
             <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg mb-4 border-2 border-solid border-slate-100 ">
       <div className="flex flex-wrap justify-between bg-[#F3F3F3] p-2">
@@ -16,7 +22,8 @@ const NewsDetails = () => {
           <div className="flex space-x-4">
             <img
               alt=""
-              src={image_url}
+
+              // src={image_url}
               className="object-cover w-12 h-12 rounded-full shadow bg-gray-500"
             />
             <div className="flex flex-col space-y-1">
@@ -59,17 +66,18 @@ const NewsDetails = () => {
       </div>
 
       <div>
-        <h2 className="mb-1 text-xl font-semibold">{title}</h2>
+        {/* <h2 className="mb-1 text-xl font-semibold">{title}</h2> */}
       </div>
       <div>
         <img
-          src={image_url}
+       
+          // src={image_url}
           alt=""
           className="object-cover w-full mb-4 h-60 sm:h-96 bg-gray-500"
         />
 
         <p className="text-sm text-gray-400">
-        {details}
+        {/* {details} */}
         </p>
         <hr />
         <div className="flex justify-between items-center">
@@ -104,7 +112,7 @@ const NewsDetails = () => {
           <div>
             <h3>
               {" "}
-              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye> {total_view}
+              {/* <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye> {total_view} */}
             </h3>
           </div>
         </div>

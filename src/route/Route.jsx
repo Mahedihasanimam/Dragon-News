@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Registation from '../pages/Registation';
 import NewsDetails from '../pages/NewsDetails';
+import PrivateRoute from './PrivateRoute';
 
 
 const router =createBrowserRouter([
@@ -20,7 +21,8 @@ const router =createBrowserRouter([
           },
           {
             path:'/news/:id',
-            element:<NewsDetails></NewsDetails>,
+            element:<PrivateRoute><NewsDetails></NewsDetails></PrivateRoute>
+           
            
           },
           {
