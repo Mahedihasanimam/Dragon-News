@@ -3,7 +3,10 @@ import Navbar from "../shared/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 const Login = () => {
+  const location=useLocation()
+  console.log(location)
     const navigate=useNavigate()
     const {login}=useContext(AuthContext)
     const handleLogin=(e)=>{
@@ -15,7 +18,7 @@ const Login = () => {
         .then(result=>{
             console.log(result)
             e.target.reset()
-            navigate('/')
+            navigate(location?.state?location.state:'/')
         })
         .then(err=>{
             console.log(err.message)

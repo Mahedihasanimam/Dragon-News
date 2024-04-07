@@ -14,6 +14,8 @@ const Registation = () => {
         const photo=form.get('photo')
         const email=form.get('email')
         const password=form.get('password')
+        const chack=form.get('chack')
+       
         console.log(name,photo,email,password)
 
         CreateUser(email,password)
@@ -94,7 +96,7 @@ const Registation = () => {
               />
             </div>
 
-            <input id="chack" type="checkbox" />
+            <input id="chack" name="chack" type="checkbox" />
             <label htmlFor="chack" > Accept our term & condition</label>
           </div>
           <div className="space-y-2">

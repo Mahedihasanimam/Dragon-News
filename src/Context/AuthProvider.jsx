@@ -5,7 +5,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import auth from "../firbase/firbase.init";
+import auth from "../firbase/firbase.config";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -27,7 +27,7 @@ const login=(email,password)=>{
 //   on auth state 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+      
       setUser(currentUser);
     });
     return () => {

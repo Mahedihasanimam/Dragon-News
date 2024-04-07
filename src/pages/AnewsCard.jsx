@@ -3,9 +3,9 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AnewsCard = ({ newsinfo }) => {
-  console.log(newsinfo.image_url)
+  
   const { title, image_url, author, details, total_view, _id } = newsinfo;
-  console.log();
+ 
   return (
     <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg mb-4 border-2 border-solid border-slate-100 ">
 
